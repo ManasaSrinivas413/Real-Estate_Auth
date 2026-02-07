@@ -1,0 +1,136 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
+    position: relative;
+
+    background-image: url("../img/bg.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+}
+
+
+.login-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.form-container {
+    width: 380px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    text-align: center;
+    animation: fadeIn 0.8s ease;
+}
+
+
+.form-container h2 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    transform: translateY(-50%);
+    color: #2ecc71;
+    font-size: 16px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px 12px 42px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    background: #f9f9f9;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #2ecc71;
+    background: #fff;
+    outline: none;
+}
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+.footer-text a {
+    color: #27ae60;
+    font-weight: 600;
+    text-decoration: none;
+}
+.footer-text a:hover {
+    text-decoration: underline;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 420px) {
+    .form-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

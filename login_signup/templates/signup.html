@@ -1,0 +1,66 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="login-wrapper">
+    <div class="form-container">
+        <h2>Signup</h2>
+        <p class="subtitle">Join us and get started</p>
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert {{ message.tags }}">
+                    <i class="fa {% if message.tags == 'error' %}fa-circle-exclamation{% else %}fa-circle-check{% endif %}"></i>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                {{ form.username }}
+            </div>
+            <div class="input-group">
+                <i class="fa fa-envelope"></i>
+                {{ form.email }}
+            </div>
+            <div class="input-group">
+                <i class="fa fa-phone"></i>
+                {{ form.phone }}
+            </div>
+            <div class="input-group">
+                <i class="fa fa-users"></i>
+                {{ form.role }}
+            </div>
+            <div class="input-group">
+                <i class="fa fa-lock"></i>
+                {{ form.password }}
+            </div>
+            <div class="input-group">
+                <i class="fa fa-lock"></i>
+                {{ form.confirm_password }}
+            </div>
+            <button type="submit">
+                <i class="fa fa-user-plus"></i> Signup
+            </button>
+        </form>
+
+        <p class="footer-text">
+            Already have an account?
+            <a href="{% url 'login' %}">Login</a>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
