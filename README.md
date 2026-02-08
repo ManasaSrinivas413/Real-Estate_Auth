@@ -26,7 +26,7 @@ The project uses MySQL (or SQLite) as the database backend and demonstrates secu
   - Field-level error messages.
   - Global success/error messages displayed.
 
-
+---
 ## Project Structure
 login_signup/                  # Root Django project folder
 ├── login_signup/              # Project settings folder
@@ -57,10 +57,10 @@ login_signup/                  # Root Django project folder
 │
 ├── db.sqlite3              # SQLite database file (or MySQL configured in settings)
 ├── manage.py               # Django CLI utility
-
+---
 1. Create a virtual environment
-python -m venv venv
-venv\Scripts\activate       # Windows
+.python -m venv venv
+v.env\Scripts\activate       # Windows
 pip install django
 
 Step 2: Create a Django Project
