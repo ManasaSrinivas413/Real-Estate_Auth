@@ -25,7 +25,7 @@ The project uses MySQL (or SQLite) as the database backend and demonstrates secu
   - Bootstrap-style form inputs with Font Awesome icons.
   - Field-level error messages.
   - Global success/error messages displayed.
-
+```
 ---
 ## Project Structure
 
@@ -59,6 +59,7 @@ login_signup/ # Root Django project folder
 ├── db.sqlite3 # SQLite database file (or MySQL configured in settings)
 ├── manage.py # Django CLI utility
 ---
+```
 
 # Setup & Installation for Real-Estate-Auth Django Project
 
