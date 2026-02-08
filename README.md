@@ -82,7 +82,7 @@ python manage.py startapp ls1
 
 # 4. Configure the database
 # In login_signup/settings.py, add:
-
+```
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # or 'django.db.backends.sqlite3' for SQLite
@@ -93,7 +93,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
+```
 # 5. Create the database in MySQL
 Open MySQL shell and run:
 CREATE DATABASE myapp;
@@ -117,7 +117,7 @@ SHOW TABLES;
 
 # Inspect all users in the superuser table
 SELECT * FROM ls1_superuser;
-
+```
 # Usage Instructions
 
 # Signup
@@ -132,13 +132,16 @@ After successful login, you’ll see a welcome message with your role
 Error Handling
 Field-specific errors are shown below each input
 Global messages displayed at the top
-
+```
+```
 # Security Notes
  Passwords are hashed using Django’s built-in authentication system
  confirm_password is not stored in the database, only used for form validation
  Authentication uses Django’s authenticate and login functions for safety
-
+```
+```
 # Customization
  Roles: Modify ROLE_CHOICES in models.py to add or remove user roles
  Styling: Update static/css/style.css for custom styles
  Icons: Update Font Awesome icons in templates
+```
