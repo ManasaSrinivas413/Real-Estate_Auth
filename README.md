@@ -27,7 +27,6 @@ The project uses MySQL (or SQLite) as the database backend and demonstrates secu
   - Global success/error messages displayed.
 
 ---
-
 ## Project Structure
 
 login_signup/ # Root Django project folder
@@ -59,8 +58,6 @@ login_signup/ # Root Django project folder
 │
 ├── db.sqlite3 # SQLite database file (or MySQL configured in settings)
 ├── manage.py # Django CLI utility
-
-
 ---
 
 # Setup & Installation for Real-Estate-Auth Django Project
@@ -69,7 +66,7 @@ login_signup/ # Root Django project folder
 python -m venv venv
 
 # Activate environment
-# Windows
+Windows
 venv\Scripts\activate
 
 # Install Django
@@ -97,7 +94,7 @@ DATABASES = {
 }
 
 # 5. Create the database in MySQL
-# Open MySQL shell and run:
+Open MySQL shell and run:
 CREATE DATABASE myapp;
 
 # 6. Apply migrations
@@ -108,7 +105,7 @@ python manage.py migrate
 python manage.py runserver
 
 # Database Operations (MySQL / SQLite)
-# Show all databases
+ Show all databases
 SHOW DATABASES;
 
 # Use the project database
@@ -123,25 +120,24 @@ SELECT * FROM ls1_superuser;
 # Usage Instructions
 
 # Signup
-# Go to /signup/
-# Fill in username, email, phone, role, password, and confirm password
-# Submit to create an account
+Go to /signup/
+Fill in username, email, phone, role, password, and confirm password
+Submit to create an account
 
 # Login
-# Go to /login/
-# Enter username and password
-# After successful login, you’ll see a welcome message with your role
-
-# Error Handling
-# Field-specific errors are shown below each input
-# Global messages displayed at the top
+Go to /login/
+Enter username and password
+After successful login, you’ll see a welcome message with your role
+Error Handling
+Field-specific errors are shown below each input
+Global messages displayed at the top
 
 # Security Notes
-# Passwords are hashed using Django’s built-in authentication system
-# confirm_password is not stored in the database, only used for form validation
-# Authentication uses Django’s authenticate and login functions for safety
+ Passwords are hashed using Django’s built-in authentication system
+ confirm_password is not stored in the database, only used for form validation
+ Authentication uses Django’s authenticate and login functions for safety
 
 # Customization
-# Roles: Modify ROLE_CHOICES in models.py to add or remove user roles
-# Styling: Update static/css/style.css for custom styles
-# Icons: Update Font Awesome icons in templates
+ Roles: Modify ROLE_CHOICES in models.py to add or remove user roles
+ Styling: Update static/css/style.css for custom styles
+ Icons: Update Font Awesome icons in templates
