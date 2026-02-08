@@ -145,3 +145,6 @@ Global messages displayed at the top
  Styling: Update static/css/style.css for custom styles
  Icons: Update Font Awesome icons in templates
 ```
+
+
+
